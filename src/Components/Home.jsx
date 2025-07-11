@@ -36,13 +36,12 @@ function Home() {
 
   return (
     <div className="home-wrapper">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quisquam, quis dolorem quo laboriosam quae,tenetur iusto, <br /> obcaecati similique vero ullam ratione laborum repudiandae sapiente quidem aliquam veritatis vitae id.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Voluptates quisquam, quis dolorem quo laboriosam quae,tenetur iusto, obcaecati similique vero ullam ratione laborum repudiandae sapiente quidem aliquam veritatis vitae id.<br /> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quisquam, quis dolorem quo laboriosam quae,tenetur iusto, <br /> obcaecati similique vero ullam ratione laborum repudiandae sapiente quidem aliquam veritatis vitae id. <br />
-       </p>
+      <div className='homeSec1'><div className='homeinputDiv'><input className='homeInput' type="text" placeholder='Type...' /> <button className='homeBtn'>Search</button></div></div>
+      <div className='homePic-wrapper'>
       {photos.map((photo) => (
         <img key={photo.id} src={photo.urls.small} alt={photo.alt_description} />
       ))}
+      </div>
     </div>
   );
 }

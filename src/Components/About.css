@@ -48,7 +48,6 @@
     border: none;
     outline: none;
     color: whitesmoke;
-    font-family: 'Pacifico', cursive;
 }
 
 .footerInput::placeholder{
@@ -65,7 +64,6 @@
     font-size: 14px;
     font-weight: bold;
     background-color: white;
-    font-family: 'Pacifico', cursive;
 }
 
 .ulLinks{
