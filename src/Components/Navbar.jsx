@@ -8,25 +8,28 @@ function Navbar() {
     <div className='navbar-wrapper'>
       <div className='logo-wrapper'>
         <img className='logoImg' src={logo} alt="SnapSurprise Logo" />
-        <h1 className='logoText'>SnapSurprise</h1>
+        <h1 className='logoText'>SnapSurprise </h1>
       </div>
+      <div className='navLink-wrapper'>
         <NavLink to= '/Home'
         className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> Home </NavLink>
 
         <NavLink to='/Wallpeper'
         className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> Wallpapers </NavLink>
 
-        <NavLink to='/3D Renders'
+        <NavLink to='/Renders'
         className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> 3D Renders </NavLink>
+
+        <NavLink to='/Interiors'
+        className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> Interiors </NavLink>
 
         <NavLink to='/Nature'
         className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> Nature </NavLink>
 
         <NavLink to='/Travel'
         className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> Travel </NavLink>
-        
-        <NavLink to='/Architecture & Interiors'
-        className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> Architecture & Interiors </NavLink>
+        <NavLink>🤍</NavLink>
+        </div>
     </div>
   )
 }

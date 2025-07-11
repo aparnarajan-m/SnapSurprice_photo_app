@@ -3,6 +3,10 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import Home from './Components/Home'
 import Wallpeper from './Components/Wallpeper'
+import Renders from './Components/Renders'
+import Interiors from './Components/Interiors'
+import Nature from './Components/Nature'
+import Travel from './Components/Travel'
 import About from './Components/About'
 
 function App() {
@@ -14,6 +18,10 @@ function App() {
       <Routes>
         <Route path='/Home' element= {<Home/>}/>
         <Route path='/Wallpeper' element= {<Wallpeper/>}/>
+        <Route path='/Nature' element= {<Nature/>}/>
+        <Route path='/Travel' element= {<Travel/>}/>
+        <Route path='/Renders' element= {<Renders/>}/>
+        <Route path='/Interiors' element= {<Interiors/>}/>
       </Routes>
       <About/>
     </div>
