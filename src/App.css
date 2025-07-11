@@ -1,0 +1,14 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.main-wrapper{
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #F9F9F9;
+  color: white;
+  font-family: 'Pacifico', cursive;
+}
