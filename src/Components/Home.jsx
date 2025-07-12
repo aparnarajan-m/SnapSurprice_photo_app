@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { FaRegHeart } from 'react-icons/fa';
 import './Home.css'
 
 function Home() {
@@ -8,39 +9,36 @@ function Home() {
 
   const Access_Key = 'mEdZzIqQBcG71NokgtnHnGJlAFdSPj_q39MUveYIcjs';
 
-  const categories = ['wallpapers','renders', 'interior', 'nature', 'travel'];
-
   useEffect(() => {
-    const fetchAll = async () => {
+    const fetchRandomPhotos = async () => {
       try {
-        const allPhotos = [];
-
-        for (const category of categories) {
-          const res = await fetch(`https://api.unsplash.com/search/photos?query=${category}&per_page=3&client_id=${Access_Key}`);
-          const data = await res.json();
-          allPhotos.push(...data.results);
-          allPhotos.sort(() => Math.random() - 0.5);
-        }
-        setPhotos(allPhotos);
+        const res = await fetch(`https://api.unsplash.com/photos/random?count=30&client_id=${Access_Key}`);
+        const data = await res.json();
+        setPhotos(data);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching photos:', error);
+        console.error('Error fetching random photos:', error);
         setLoading(false);
       }
     };
 
-    fetchAll();
+    fetchRandomPhotos();
   }, []);
 
-  if (loading) return <p style={{ color: 'blue' }}>Loading mixed categories...</p>;
+  if (loading) return <p style={{ color: 'blue' }}>Loading random photos...</p>;
 
   return (
     <div className="home-wrapper">
       <div className='homeSec1'><div className='homeinputDiv'><input className='homeInput' type="text" placeholder='Type...' /> <button className='homeBtn'>Search</button></div></div>
-      <div className='homePic-wrapper'>
-      {photos.map((photo) => (
-        <img key={photo.id} src={photo.urls.small} alt={photo.alt_description} />
-      ))}
+      <div className='homePic-wrapper photogallery-wrapper'>
+        {photos.map((photo) => (
+          <div className="photoCard" key={photo.id}>
+            <img src={photo.urls.small} alt={photo.alt_description} />
+            <div className='heartIcon'>
+              <FaRegHeart style={{ color: '#ccc', fontSize: '24px' }}/>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

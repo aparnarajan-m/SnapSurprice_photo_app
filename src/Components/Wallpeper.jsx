@@ -1,12 +1,10 @@
 import React from 'react'
-import './Wallpeper.css'
-import PhotoGallery from './PhotoGallery'
+import PhotoFetcher from './PhotoFetcher'
 
 function Wallpeper() {
   return (
-    <div className='wallpeperContainer'>
-        Wallpeper Container
-        <PhotoGallery query='wallpapers'/>
+    <div className='wallpeper-wrapper'>
+        <PhotoFetcher query='wallpapers'/>
     </div>
   )
 }

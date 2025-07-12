@@ -1,10 +1,10 @@
 import React from 'react'
-import PhotoGallery from './PhotoGallery'
+import PhotoFetcher from './PhotoFetcher'
 
 function ArchitectureInteriors() {
   return (
     <div>
-        <PhotoGallery query= 'Interiors'/>
+        <PhotoFetcher query= 'Interiors'/>
     </div>
   )
 }

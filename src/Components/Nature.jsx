@@ -1,10 +1,10 @@
 import React from 'react'
-import PhotoGallery from './PhotoGallery'
+import PhotoFetcher from './PhotoFetcher'
 
 function Nature() {
   return (
     <div className='nature-wrapper'>
-        <PhotoGallery query='nature'/>
+        <PhotoFetcher query='nature'/>
     </div>
   )
 }

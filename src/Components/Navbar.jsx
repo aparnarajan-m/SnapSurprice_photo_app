@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/camera-logo.png'
+import { FaHeart } from 'react-icons/fa'
 import './Navbar.css'
 
 function Navbar() {
@@ -28,7 +29,9 @@ function Navbar() {
 
         <NavLink to='/Travel'
         className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> Travel </NavLink>
-        <NavLink>🤍</NavLink>
+
+        <NavLink to='/Favorites'
+        className={({ isActive }) => isActive ? 'navLink active' : 'navLink'}> <FaHeart style={{ color: 'red', fontSize: '16px' }}/> </NavLink>
         </div>
     </div>
   )

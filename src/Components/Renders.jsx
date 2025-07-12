@@ -1,10 +1,10 @@
 import React from 'react'
-import PhotoGallery from './PhotoGallery'
+import PhotoFetcher from './PhotoFetcher'
 
 function Renders() {
   return (
     <div className='renders-wrapper'>
-      <PhotoGallery query='Renders'/>
+      <PhotoFetcher query='Renders'/>
     </div>
   )
 }

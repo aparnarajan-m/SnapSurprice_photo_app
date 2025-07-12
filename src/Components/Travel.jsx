@@ -1,11 +1,10 @@
 import React from 'react'
-import PhotoGallery from './PhotoGallery'
-import './Travel.css'
+import PhotoFetcher from './PhotoFetcher'
 
 function Travel() {
   return (
     <div className='travel-wrapper'>
-       <PhotoGallery query='Travel'/>
+       <PhotoFetcher query='Travel'/>
     </div>
   )
 }

@@ -7,6 +7,7 @@ import Renders from './Components/Renders'
 import Interiors from './Components/Interiors'
 import Nature from './Components/Nature'
 import Travel from './Components/Travel'
+import Favorites from './Components/Favorites'
 import About from './Components/About'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/Travel' element= {<Travel/>}/>
         <Route path='/Renders' element= {<Renders/>}/>
         <Route path='/Interiors' element= {<Interiors/>}/>
+        <Route path='/Favorites' element= {<Favorites/>}/>
       </Routes>
       <About/>
     </div>
