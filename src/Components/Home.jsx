@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import blueLogo from '../assets/camera-logo-blue.png'
 import { FaRegHeart } from 'react-icons/fa';
 import './Home.css'
 
@@ -25,7 +26,8 @@ function Home() {
     fetchRandomPhotos();
   }, []);
 
-  if (loading) return <p style={{ color: 'blue' }}>Loading random photos...</p>;
+  //loading random photos
+  if (loading) return <div className='loading-wrapper'><img src={blueLogo} alt="logoImage" /> <h2 className='loadingText'>Loading random photos...</h2></div>;
 
   return (
     <div className="home-wrapper">

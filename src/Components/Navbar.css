@@ -1,35 +1,41 @@
-.navbar-wrapper{
-    width: 100%;
-    height: 80px;
-    background-color: #152A58;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: sticky;
-    top: 0;
+.navbar-wrapper {
+  width: 100%;
+  height: 80px;
+  background-color: #152A58;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
 }
 
-.logo-wrapper{
-    display: flex;
-    align-items: center;
+.logo-wrapper {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color:aquamarine; */
 }
 
-.logoImg{
-    width: 55px;
+.logoImg {
+  width: 55px;
 }
 
-.navLink-wrapper{
-  width: 40%;
+.navLink-wrapper {
+  width: 45%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  /* background-color:aquamarine; */
 }
-.navLink{
-    color: whitesmoke;
-    text-decoration: none;
-    transition: color 0.3s ease;
+
+.navLink {
+  color: whitesmoke;
+  font-size: large;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navLink:hover {
@@ -37,5 +43,5 @@
 }
 
 .navLink.active {
-  border-bottom: 2px solid  #3c5a9b;
+  border-bottom: 2px solid #3c5a9b;
 }

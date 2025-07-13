@@ -1,9 +1,10 @@
 import React from 'react'
+import './Favorites.css'
 
 function Favorites() {
   return (
-    <div>
-        <h1 style={{color: '#152A58', display: 'flex', alignItems: 'center', justifyContent: 'center', height:'242px'}}>No Favorites</h1>
+    <div className='favorites-wrapper'>
+      <h1 className='favoriteText'>No Favorites</h1>
     </div>
   )
 }
