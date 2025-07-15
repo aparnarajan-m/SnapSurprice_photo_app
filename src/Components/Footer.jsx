@@ -1,15 +1,15 @@
 import React from 'react'
-import { FaInstagram, FaTwitter, FaWhatsapp, FaPinterest, FaLinkedin, FaFacebook, FaYoutube } from 'react-icons/fa';
-import './About.css'
+import { FaInstagram, FaTwitter, FaPinterest, FaFacebook } from 'react-icons/fa';
+import './Footer.css'
 
-function About() {
+function Footer() {
     return (
-        <div className='about-wrapper'>
-            <div className='about-container'>
+        <div className='footer-wrapper'>
+            <div className='footer-container'>
 
-                <div className='about-content'>
-                    <div className='about-description'>
-                        <h2>About Us</h2>
+                <div className='footer-content'>
+                    <div className='footer-description'>
+                        <h2 className='footer-heading'>About Us</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
                             Suscipit totam itaque sunt ab, impedit dicta cum saepe, <br />
                             fugit quis voluptatibus cumque illum exercitationem consequatur animi ipsa reprehenderit?  <br />
@@ -22,12 +22,9 @@ function About() {
                         </div>
                         <div className="social-links">
                             <a className='facebook' href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-                            <a className='youtube' href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
                             <a className='instagram' href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                             <a className='twitter' href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-                            <a className='watsapp' href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
                             <a className='pinrest' href="https://pinterest.com" target="_blank" rel="noopener noreferrer"><FaPinterest /></a>
-                            <a className='linkedin' href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                         </div>
                     </div>
 
@@ -63,4 +60,4 @@ function About() {
     )
 }
 
-export default About
+export default Footer

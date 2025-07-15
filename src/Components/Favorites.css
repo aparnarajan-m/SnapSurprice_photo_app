@@ -1,7 +1,11 @@
-.favoriteText{
+.favorites-wrapper{
     height: 691px;
-    color: #152A58;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.favoriteText{
+    color: #152A58;
 }

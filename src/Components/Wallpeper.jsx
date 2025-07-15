@@ -1,11 +1,13 @@
 import React from 'react'
 import PhotoFetcher from './PhotoFetcher'
 
-function Wallpeper() {
+function Wallpeper({ favorites, toggleFavorite }) {
   return (
-    <div className='wallpeper-wrapper'>
-        <PhotoFetcher query='wallpapers'/>
-    </div>
+    <PhotoFetcher
+      query="wallpapers"
+      favorites={favorites}
+      toggleFavorite={toggleFavorite}
+    />
   )
 }
 

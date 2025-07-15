@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { FaRegHeart } from 'react-icons/fa';
-import './PhotoFetcher.css'
+import './Style.css'
+import PhotoGrid from './PhotoGrid';
 
-function PhotoGallery({ query }) {
+function PhotoFetcher({ query, favorites, toggleFavorite }) {
     const [photos, setPhotos] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -21,20 +21,19 @@ function PhotoGallery({ query }) {
                 setLoading(false);
             })
     }, [query]);
+
     if (loading) return <p style={{ color: 'blue', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '300px' }}>Loading {query}........</p>
 
     return (
-        <div className='photogallery-wrapper'>
-            {photos.map(photo => (
-                <div className='photoCard' key={photo.id}>
-                    <img src={photo.urls.small} alt={photo.alt_description} />
-                    <div className='heartIcon'>
-                        <FaRegHeart style={{ color: '#ccc', fontSize: '24px' }}/>
-                    </div>
-                </div>  
-            ))}
+        <div className='photoFetch-wrapper'>
+            <PhotoGrid
+                photos={photos}
+                favorites={favorites}
+                toggleFavorite={toggleFavorite}
+            />
+
         </div>
     )
 }
 
-export default PhotoGallery
+export default PhotoFetcher

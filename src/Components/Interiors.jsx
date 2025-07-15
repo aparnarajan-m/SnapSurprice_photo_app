@@ -1,11 +1,16 @@
 import React from 'react'
 import PhotoFetcher from './PhotoFetcher'
 
-function ArchitectureInteriors() {
+function ArchitectureInteriors({ favorites, toggleFavorite }) {
   return (
-    <div>
-        <PhotoFetcher query= 'Interiors'/>
-    </div>
+    // <div>
+    //     <PhotoFetcher query= 'Interiors'/>
+    // </div>
+    <PhotoFetcher
+      query="Interiors"
+      favorites={favorites}
+      toggleFavorite={toggleFavorite}
+    />
   )
 }
 
